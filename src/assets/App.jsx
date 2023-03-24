@@ -23,24 +23,6 @@ const App = () => {
           </Route>
           <Route path="*" element={<ErrorPage />} />
       </Routes>
-      <main>
-        <section>
-          imagenes
-        </section>
-        <section>
-          <p>empresa</p>
-          <h2>proucto</h2>
-          <p>descripcion</p>
-          <p>
-            <span>100.00</span>
-            <span>20%</span>
-          </p>
-          <div>
-            <button>-</button>
-            <span>0</span>
-          </div>
-        </section>
-      </main>
     </div>
   )
 }

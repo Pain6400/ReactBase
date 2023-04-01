@@ -1,8 +1,11 @@
-
+import Button from '@mui/material/Button';
 
  const ProductDetail = () => {
   return (
-    <h1>detalle producto</h1>
+    <div>
+      <h1>detalle producto</h1>
+      <Button variant="contained">Hello World</Button>
+    </div>
   )
 }
 

@@ -1,7 +1,6 @@
 import PropTypes from 'prop-types';
 import { set, sub } from 'date-fns';
 import { noCase } from 'change-case';
-import { faker } from '@faker-js/faker';
 import { useState } from 'react';
 // @mui
 import {
@@ -30,7 +29,7 @@ import Scrollbar from '../../../components/scrollbar';
 
 const NOTIFICATIONS = [
   {
-    id: faker.datatype.uuid(),
+    id: 1,
     title: 'Your order is placed',
     description: 'waiting for shipping',
     avatar: null,
@@ -39,8 +38,8 @@ const NOTIFICATIONS = [
     isUnRead: true,
   },
   {
-    id: faker.datatype.uuid(),
-    title: faker.name.fullName(),
+    id: 2,
+    title: "test",
     description: 'answered to your comment on the Minimal',
     avatar: '/assets/images/avatars/avatar_2.jpg',
     type: 'friend_interactive',
@@ -48,7 +47,7 @@ const NOTIFICATIONS = [
     isUnRead: true,
   },
   {
-    id: faker.datatype.uuid(),
+    id: 3,
     title: 'You have new message',
     description: '5 unread messages',
     avatar: null,
@@ -57,7 +56,7 @@ const NOTIFICATIONS = [
     isUnRead: false,
   },
   {
-    id: faker.datatype.uuid(),
+    id: 4,
     title: 'You have new mail',
     description: 'sent from Guido Padberg',
     avatar: null,
@@ -66,7 +65,7 @@ const NOTIFICATIONS = [
     isUnRead: false,
   },
   {
-    id: faker.datatype.uuid(),
+    id: 5,
     title: 'Delivery processing',
     description: 'Your order is being shipped',
     avatar: null,

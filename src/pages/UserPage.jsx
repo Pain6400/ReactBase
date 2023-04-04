@@ -27,12 +27,31 @@ import Label from '../components/label';
 import Iconify from '../components/iconify';
 import Scrollbar from '../components/scrollbar';
 // sections
-import { UserListHead, UserListToolbar } from '../sections/@dashboard/user';
+//import { UserListHead, UserListToolbar } from '../sections/@dashboard/user';
 // mock
-import USERLIST from '../_mock/user';
+//import USERLIST from '../_mock/user';
 
 // ----------------------------------------------------------------------
-
+const USERLIST = [...Array(24)].map((_, index) => ({
+  id: faker.datatype.uuid(),
+  avatarUrl: `/assets/images/avatars/avatar_${index + 1}.jpg`,
+  name: faker.name.fullName(),
+  company: faker.company.name(),
+  isVerified: faker.datatype.boolean(),
+  status: sample(['active', 'banned']),
+  role: sample([
+    'Leader',
+    'Hr Manager',
+    'UI Designer',
+    'UX Designer',
+    'UI/UX Designer',
+    'Project Manager',
+    'Backend Developer',
+    'Full Stack Designer',
+    'Front End Developer',
+    'Full Stack Developer',
+  ]),
+}));
 const TABLE_HEAD = [
   { id: 'name', label: 'Name', alignRight: false },
   { id: 'company', label: 'Company', alignRight: false },
@@ -102,14 +121,14 @@ export default function UserPage() {
     setOrderBy(property);
   };
 
-  const handleSelectAllClick = (event) => {
-    if (event.target.checked) {
-      const newSelecteds = USERLIST.map((n) => n.name);
-      setSelected(newSelecteds);
-      return;
-    }
-    setSelected([]);
-  };
+  // const handleSelectAllClick = (event) => {
+  //   if (event.target.checked) {
+  //     const newSelecteds = USERLIST.map((n) => n.name);
+  //     setSelected(newSelecteds);
+  //     return;
+  //   }
+  //   setSelected([]);
+  // };
 
   const handleClick = (event, name) => {
     const selectedIndex = selected.indexOf(name);
@@ -163,20 +182,12 @@ export default function UserPage() {
         </Stack>
 
         <Card>
-          <UserListToolbar numSelected={selected.length} filterName={filterName} onFilterName={handleFilterByName} />
+          <h1>test</h1>
 
           <Scrollbar>
             <TableContainer sx={{ minWidth: 800 }}>
               <Table>
-                <UserListHead
-                  order={order}
-                  orderBy={orderBy}
-                  headLabel={TABLE_HEAD}
-                  rowCount={USERLIST.length}
-                  numSelected={selected.length}
-                  onRequestSort={handleRequestSort}
-                  onSelectAllClick={handleSelectAllClick}
-                />
+                <h1>test</h1>
                 <TableBody>
                   {filteredUsers.slice(page * rowsPerPage, page * rowsPerPage + rowsPerPage).map((row) => {
                     const { id, name, role, status, company, avatarUrl, isVerified } = row;

@@ -1,15 +1,15 @@
 import { createBrowserRouter, Navigate } from "react-router-dom";
-import Layout from "../layout/Layout";
+
 // layouts
-import DashboardLayout from './layouts/dashboard';
-import SimpleLayout from './layouts/simple';
+import DashboardLayout from '../layout/dashboard';
+import SimpleLayout from '../layout/simple';
 //
-import BlogPage from './pages/BlogPage';
-import UserPage from './pages/UserPage';
-import LoginPage from './pages/LoginPage';
-import Page404 from './pages/Page404';
-import ProductsPage from './pages/ProductsPage';
-import DashboardAppPage from './pages/DashboardAppPage';
+import BlogPage from '../pages/BlogPage';
+import UserPage from '../pages/UserPage';
+import LoginPage from '../pages/LoginPage';
+import Page404 from '../pages/Page404';
+import ProductsPage from '../pages/ProductsPage';
+import DashboardAppPage from '../pages/DashboardAppPage';
 import About from "../pages/About";
 import Home from "../pages/Home";
 import NotFound from "../pages/NotFound";

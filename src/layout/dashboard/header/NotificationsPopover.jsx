@@ -29,7 +29,7 @@ import Scrollbar from '../../../components/scrollbar';
 
 const NOTIFICATIONS = [
   {
-    id: 1,
+    id: "1",
     title: 'Your order is placed',
     description: 'waiting for shipping',
     avatar: null,
@@ -38,7 +38,7 @@ const NOTIFICATIONS = [
     isUnRead: true,
   },
   {
-    id: 2,
+    id: "2",
     title: "test",
     description: 'answered to your comment on the Minimal',
     avatar: '/assets/images/avatars/avatar_2.jpg',
@@ -47,7 +47,7 @@ const NOTIFICATIONS = [
     isUnRead: true,
   },
   {
-    id: 3,
+    id: "3",
     title: 'You have new message',
     description: '5 unread messages',
     avatar: null,
@@ -56,7 +56,7 @@ const NOTIFICATIONS = [
     isUnRead: false,
   },
   {
-    id: 4,
+    id: "4",
     title: 'You have new mail',
     description: 'sent from Guido Padberg',
     avatar: null,
@@ -65,7 +65,7 @@ const NOTIFICATIONS = [
     isUnRead: false,
   },
   {
-    id: 5,
+    id: "5",
     title: 'Delivery processing',
     description: 'Your order is being shipped',
     avatar: null,

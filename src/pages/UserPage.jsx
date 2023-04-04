@@ -2,6 +2,7 @@ import { Helmet } from 'react-helmet-async';
 import { filter } from 'lodash';
 import { sentenceCase } from 'change-case';
 import { useState } from 'react';
+import { sample } from 'lodash';
 // @mui
 import {
   Card,
@@ -33,11 +34,11 @@ import Scrollbar from '../components/scrollbar';
 
 // ----------------------------------------------------------------------
 const USERLIST = [...Array(24)].map((_, index) => ({
-  id: faker.datatype.uuid(),
+  id: 1,
   avatarUrl: `/assets/images/avatars/avatar_${index + 1}.jpg`,
-  name: faker.name.fullName(),
-  company: faker.company.name(),
-  isVerified: faker.datatype.boolean(),
+  name: "kevin mejia",
+  company: "finsol",
+  isVerified: true,
   status: sample(['active', 'banned']),
   role: sample([
     'Leader',
